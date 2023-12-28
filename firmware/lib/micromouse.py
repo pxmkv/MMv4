@@ -14,7 +14,7 @@ Right_Motor = machine.PWM(Right_Motor_Pin)
 
 
 
-class Mice:
+class Mice(object):
     def __init__(self) -> None:
         return 
     def motor(Left,Right):
@@ -22,9 +22,7 @@ class Mice:
         Right_Motor.duty(Right)
 
 
-
-
-class WIFI:
+class WIFI(object):
     NETWORK_PROFILES = 'wifi.dat'
     wlan_sta = network.WLAN(network.STA_IF)
     isconnected=wlan_sta.isconnected
